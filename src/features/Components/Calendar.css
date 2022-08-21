@@ -1,0 +1,60 @@
+.calendar-container {
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+}
+
+.calendar-header {
+  height: 44px;
+  margin-bottom: 16px;
+  display: grid;
+  grid-template-columns: 44px auto 44px;
+}
+
+.v-h-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icons {
+  background-color: var(--color-white);
+}
+
+.icons:hover {
+  background-color: var(--color-light-gray);
+}
+
+.calendar-dates {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  justify-content: center;
+  align-items: center;
+}
+
+.today {
+  background-color: var(--color-yellow);
+}
+
+.hover {
+  background-color: var(--color-light-gray);
+}
+
+.active {
+  background-color: var(--color-blue);
+}
+
+.date {
+  height: 36px;
+}
+
+.date:hover {
+  background-color: var(--color-light-gray);
+}
+
+.non-current-month {
+  color: var(--color-gray);
+  cursor: not-allowed
+}
+
