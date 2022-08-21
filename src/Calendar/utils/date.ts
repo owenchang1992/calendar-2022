@@ -11,7 +11,9 @@ const defaultDate = {
   isToday: false,
   isActive: false,
 } as DateType;
- 
+
+
+// generate read only infomation 
 export const getDates = (year: number, month: number) => {
   // calculate days in current mouth
   const datesInMonth = 32 - new Date(year, month, 32).getDate();

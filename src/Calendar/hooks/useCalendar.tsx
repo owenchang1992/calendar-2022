@@ -1,4 +1,4 @@
-import { useCallback, useState, useMemo } from 'react'
+import { useState, useMemo } from 'react'
 import { getDates, DateType } from '../utils/date';
 
 type SelectDateType = {
@@ -66,48 +66,40 @@ export default function useCalendar(
     })
   }
 
-  const tagSelectedDate = useCallback((date: DateType) => {
+  const tagSelectedDate = (date: DateType) => {
     const { year, month } = calendar
 
-    if (selectedDate.beginDate && selectedDate.endDate) {
-      const beginDate = new Date(
-        selectedDate.beginDate.year,
-        selectedDate.beginDate.month,
-        selectedDate.beginDate.date,
-      )
+    if (!selectedDate.beginDate) return date;
 
-      const endDate = new Date(
-        selectedDate.endDate.year,
-        selectedDate.endDate.month,
-        selectedDate.endDate.date,
-      )
+    const beginDate = new Date(
+      selectedDate.beginDate.year,
+      selectedDate.beginDate.month,
+      selectedDate.beginDate.date,
+    )
 
-      const isAfterBeginDate = new Date(year, month, date.title) >= beginDate
-      const isBeforeEndDate = new Date(year, month, date.title) <= endDate
+    const endDate = selectedDate.endDate ? new Date(
+      selectedDate.endDate.year,
+      selectedDate.endDate.month,
+      selectedDate.endDate.date,
+    ) : null
 
-      if (isAfterBeginDate && isBeforeEndDate) return { ...date, isActive: true }
-      return date
-    }
+    const currentDate = new Date(year, month, date.title)
 
-    if (selectedDate.beginDate && !selectedDate.endDate) {
-      if (new Date(year, month, date.title) === new Date(
-        selectedDate.beginDate.year,
-        selectedDate.beginDate.month,
-        selectedDate.beginDate.date,
-      )) {
-        return { ...date, isActive: true }
-      }
+    if (endDate) {
+      if (currentDate >= beginDate && currentDate <= endDate) return { ...date, isActive: true }
+    } else if (currentDate === beginDate){
+      return { ...date, isActive: true }
     }
 
     return date
-  }, [calendar, selectedDate.beginDate, selectedDate.endDate])
+  }
 
   const selectDate = (date: DateType) => {
     const {year, month} = calendar
     if (date.isNonCurrentMonth) return
 
     if (!selectedDate.beginDate) {
-      setSelectDate({
+      return setSelectDate({
         beginDate: {
           year,
           month,
@@ -115,29 +107,29 @@ export default function useCalendar(
         },
         endDate: null,
       });
-    } else {
-      const isBeforeSelectedDate = new Date(year, month, date.title) < new Date(
-        selectedDate.beginDate.year,
-        selectedDate.beginDate.month,
-        selectedDate.beginDate.date,
-      )
-
-      if (isBeforeSelectedDate) {
-        setSelectDate({
-          beginDate: null,
-          endDate: null,
-        });
-      } else {
-        return setSelectDate({
-          ...selectedDate,
-          endDate: {
-            year,
-            month: month,
-            date: date.title,
-          },
-        });
-      }
     }
+
+    const isBeforeSelectedDate = new Date(year, month, date.title) < new Date(
+      selectedDate.beginDate.year,
+      selectedDate.beginDate.month,
+      selectedDate.beginDate.date,
+    )
+
+    if (isBeforeSelectedDate) {
+      return setSelectDate({
+        beginDate: null,
+        endDate: null,
+      });
+    }
+
+    return setSelectDate({
+      ...selectedDate,
+      endDate: {
+        year,
+        month: month,
+        date: date.title,
+      },
+    });
   }
 
   const newCalendar = useMemo(() => {
@@ -145,7 +137,7 @@ export default function useCalendar(
       ...calendar,
       dates: calendar.dates.map(tagSelectedDate)
     }
-  }, [calendar, tagSelectedDate])
+  }, [calendar, tagSelectedDate, selectedDate])
 
   return [newCalendar, monthForward, monthBackward, selectDate] as const
 }

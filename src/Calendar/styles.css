@@ -37,10 +37,6 @@
   background-color: var(--color-yellow);
 }
 
-.hover {
-  background-color: var(--color-light-gray);
-}
-
 .active {
   background-color: var(--color-blue);
 }

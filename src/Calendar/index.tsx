@@ -1,6 +1,6 @@
 import { BiChevronLeft, BiChevronRight } from 'react-icons/bi'
-import './Calendar.css'
-import useCalendar from '../hooks/useCalendar'
+import './styles.css'
+import useCalendar from './hooks/useCalendar'
 
 const Calendar = () => {
   const [
