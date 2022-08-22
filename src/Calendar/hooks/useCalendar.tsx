@@ -137,7 +137,5 @@ export default function useCalendar(
     dates: calendar.dates.map(tagSelectedDate)
   }
 
-  console.log(calendar.dates)
-
   return [newCalendar, monthForward, monthBackward, selectDate] as const
 }

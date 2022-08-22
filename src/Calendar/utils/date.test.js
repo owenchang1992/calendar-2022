@@ -228,7 +228,6 @@ describe('Test getDates function', () => {
   })
 
   it('render 2022/8/22', () => {
-    console.log(getDates(2022, 7))
     expect(getDates(2022, 7)).toEqual(expectResult202208)
   })
 });

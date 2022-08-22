@@ -1,0 +1,277 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test Calendar render 2022/8/22 1`] = `
+<div
+  className="calendar-container"
+>
+  <div
+    className="calendar-header"
+  >
+    <div
+      className="v-h-center icons"
+      onClick={[Function]}
+    >
+      <svg
+        fill="currentColor"
+        height="1em"
+        stroke="currentColor"
+        strokeWidth="0"
+        style={
+          Object {
+            "color": undefined,
+          }
+        }
+        viewBox="0 0 24 24"
+        width="1em"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z"
+        />
+      </svg>
+    </div>
+    <div
+      className="calendar-month v-h-center"
+    >
+      2022年8月
+    </div>
+    <div
+      className="v-h-center icons"
+      onClick={[Function]}
+    >
+      <svg
+        fill="currentColor"
+        height="1em"
+        stroke="currentColor"
+        strokeWidth="0"
+        style={
+          Object {
+            "color": undefined,
+          }
+        }
+        viewBox="0 0 24 24"
+        width="1em"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M10.707 17.707 16.414 12l-5.707-5.707-1.414 1.414L13.586 12l-4.293 4.293z"
+        />
+      </svg>
+    </div>
+  </div>
+  <div
+    className="calendar-dates"
+  >
+    <div
+      className="date v-h-center non-current-month"
+      onClick={[Function]}
+    >
+      31日
+    </div>
+    <div
+      className="date v-h-center "
+      onClick={[Function]}
+    >
+      1日
+    </div>
+    <div
+      className="date v-h-center "
+      onClick={[Function]}
+    >
+      2日
+    </div>
+    <div
+      className="date v-h-center "
+      onClick={[Function]}
+    >
+      3日
+    </div>
+    <div
+      className="date v-h-center "
+      onClick={[Function]}
+    >
+      4日
+    </div>
+    <div
+      className="date v-h-center "
+      onClick={[Function]}
+    >
+      5日
+    </div>
+    <div
+      className="date v-h-center "
+      onClick={[Function]}
+    >
+      6日
+    </div>
+    <div
+      className="date v-h-center "
+      onClick={[Function]}
+    >
+      7日
+    </div>
+    <div
+      className="date v-h-center "
+      onClick={[Function]}
+    >
+      8日
+    </div>
+    <div
+      className="date v-h-center "
+      onClick={[Function]}
+    >
+      9日
+    </div>
+    <div
+      className="date v-h-center "
+      onClick={[Function]}
+    >
+      10日
+    </div>
+    <div
+      className="date v-h-center "
+      onClick={[Function]}
+    >
+      11日
+    </div>
+    <div
+      className="date v-h-center "
+      onClick={[Function]}
+    >
+      12日
+    </div>
+    <div
+      className="date v-h-center "
+      onClick={[Function]}
+    >
+      13日
+    </div>
+    <div
+      className="date v-h-center "
+      onClick={[Function]}
+    >
+      14日
+    </div>
+    <div
+      className="date v-h-center "
+      onClick={[Function]}
+    >
+      15日
+    </div>
+    <div
+      className="date v-h-center "
+      onClick={[Function]}
+    >
+      16日
+    </div>
+    <div
+      className="date v-h-center "
+      onClick={[Function]}
+    >
+      17日
+    </div>
+    <div
+      className="date v-h-center "
+      onClick={[Function]}
+    >
+      18日
+    </div>
+    <div
+      className="date v-h-center "
+      onClick={[Function]}
+    >
+      19日
+    </div>
+    <div
+      className="date v-h-center "
+      onClick={[Function]}
+    >
+      20日
+    </div>
+    <div
+      className="date v-h-center "
+      onClick={[Function]}
+    >
+      21日
+    </div>
+    <div
+      className="date v-h-center today"
+      onClick={[Function]}
+    >
+      22日
+    </div>
+    <div
+      className="date v-h-center "
+      onClick={[Function]}
+    >
+      23日
+    </div>
+    <div
+      className="date v-h-center "
+      onClick={[Function]}
+    >
+      24日
+    </div>
+    <div
+      className="date v-h-center "
+      onClick={[Function]}
+    >
+      25日
+    </div>
+    <div
+      className="date v-h-center "
+      onClick={[Function]}
+    >
+      26日
+    </div>
+    <div
+      className="date v-h-center "
+      onClick={[Function]}
+    >
+      27日
+    </div>
+    <div
+      className="date v-h-center "
+      onClick={[Function]}
+    >
+      28日
+    </div>
+    <div
+      className="date v-h-center "
+      onClick={[Function]}
+    >
+      29日
+    </div>
+    <div
+      className="date v-h-center "
+      onClick={[Function]}
+    >
+      30日
+    </div>
+    <div
+      className="date v-h-center "
+      onClick={[Function]}
+    >
+      31日
+    </div>
+    <div
+      className="date v-h-center non-current-month"
+      onClick={[Function]}
+    >
+      1日
+    </div>
+    <div
+      className="date v-h-center non-current-month"
+      onClick={[Function]}
+    >
+      2日
+    </div>
+    <div
+      className="date v-h-center non-current-month"
+      onClick={[Function]}
+    >
+      3日
+    </div>
+  </div>
+</div>
+`;
