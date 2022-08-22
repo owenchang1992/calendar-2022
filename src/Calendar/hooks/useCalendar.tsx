@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react'
+import { useState } from 'react'
 import { getDates, DateType } from '../utils/date';
 
 type SelectDateType = {
@@ -132,12 +132,10 @@ export default function useCalendar(
     });
   }
 
-  const newCalendar = useMemo(() => {
-    return {
-      ...calendar,
-      dates: calendar.dates.map(tagSelectedDate)
-    }
-  }, [calendar, tagSelectedDate, selectedDate])
+  const newCalendar = {
+    ...calendar,
+    dates: calendar.dates.map(tagSelectedDate)
+  }
 
   return [newCalendar, monthForward, monthBackward, selectDate] as const
 }
